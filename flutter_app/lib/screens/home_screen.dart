@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Smart SOS Safety"),
+        title: const Text("SOSphere"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

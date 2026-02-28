@@ -13,7 +13,7 @@ class SOSApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Smart SOS',
+      title: 'SOSphere',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,

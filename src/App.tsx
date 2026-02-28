@@ -130,19 +130,19 @@ export default function App() {
       <header className="bg-black/50 backdrop-blur-xl sticky top-0 z-50 pt-safe">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <Shield className="text-white w-5 h-5" />
+            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-500/20">
+              <Shield className="text-black w-5 h-5" />
             </div>
-            <h1 className="font-bold text-lg tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">SOSphere</h1>
+            <h1 className="font-bold text-lg tracking-tight text-white">SOSphere</h1>
           </div>
           <div className="flex items-center gap-2">
-            <div className={`w-2 h-2 rounded-full ${simStatus === 'connected' ? 'bg-blue-500 animate-pulse' : simStatus === 'emergency' ? 'bg-red-500 animate-ping' : 'bg-gray-600'}`} />
+            <div className={`w-2 h-2 rounded-full ${simStatus === 'connected' ? 'bg-emerald-500 animate-pulse' : simStatus === 'emergency' ? 'bg-red-500 animate-ping' : 'bg-gray-600'}`} />
             <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
               {simStatus === 'idle' ? 'Offline' : simStatus === 'connected' ? 'Online' : 'SOS'}
             </span>
           </div>
         </div>
-        <div className="h-[2px] w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-[0_0_10px_rgba(59,130,246,0.3)] relative -top-[2px]" />
+        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-emerald-500/80 to-transparent shadow-[0_0_10px_rgba(16,185,129,0.3)] relative -top-[2px]" />
       </header>
 
       {/* Main Content Area */}
@@ -159,7 +159,7 @@ export default function App() {
               >
                 <section className="space-y-2">
                   <h2 className="text-3xl font-black text-white tracking-tight">
-                    Safety in your <span className="text-blue-500 italic">pocket.</span>
+                    Safety in your <span className="text-emerald-500 italic">pocket.</span>
                   </h2>
                   <p className="text-gray-400 text-sm leading-relaxed">
                     A complete end-to-end solution for emergency response, 
@@ -178,7 +178,7 @@ export default function App() {
                     </div>
                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
                       simStatus === 'idle' ? 'bg-gray-500/10 text-gray-500' : 
-                      simStatus === 'connected' ? 'bg-blue-500/10 text-blue-500' : 
+                      simStatus === 'connected' ? 'bg-emerald-500/10 text-emerald-500' : 
                       'bg-red-500/10 text-red-500'
                     }`}>
                       <Bluetooth className="w-6 h-6" />
@@ -198,7 +198,7 @@ export default function App() {
                         <motion.div 
                           initial={{ width: 0 }}
                           animate={{ width: `${batteryLevel}%` }}
-                          className={`h-full ${batteryLevel < 20 ? 'bg-red-500' : 'bg-blue-500'}`}
+                          className={`h-full ${batteryLevel < 20 ? 'bg-red-500' : 'bg-emerald-500'}`}
                         />
                       </div>
                     </div>
@@ -207,7 +207,7 @@ export default function App() {
                   {simStatus === 'emergency' && (
                     <button 
                       onClick={resetSim}
-                      className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 active:scale-95 transition-transform"
+                      className="w-full py-4 bg-emerald-600 text-white font-bold rounded-2xl shadow-lg shadow-emerald-600/20 active:scale-95 transition-transform"
                     >
                       I am Safe
                     </button>
@@ -215,13 +215,13 @@ export default function App() {
                 </div>
 
                 {/* Info Card */}
-                <div className="p-6 rounded-3xl bg-blue-500/5 border border-blue-500/10 space-y-4">
+                <div className="p-6 rounded-3xl bg-emerald-500/5 border border-emerald-500/10 space-y-4">
                   <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                    <Info className="w-4 h-4 text-blue-500" />
+                    <Info className="w-4 h-4 text-emerald-500" />
                     Safety Tip
                   </h3>
                   <p className="text-xs text-gray-400 leading-relaxed">
-                    Keep your SOSphere-Locket within 10 meters of your phone for a stable connection. Ensure Bluetooth is always enabled.
+                    Keep your SOS-Locket within 10 meters of your phone for a stable connection. Ensure Bluetooth is always enabled.
                   </p>
                 </div>
 
@@ -245,7 +245,7 @@ export default function App() {
                     }
                   ].map((feature, i) => (
                     <div key={i} className="p-5 rounded-3xl bg-white/5 border border-white/5 flex gap-4 items-start">
-                      <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 flex-shrink-0">
                         <feature.icon className="w-5 h-5" />
                       </div>
                       <div className="space-y-1">
@@ -259,7 +259,7 @@ export default function App() {
                 {/* How it Works Section */}
                 <section className="p-6 rounded-3xl bg-white/5 border border-white/5 space-y-6">
                   <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                    <Activity className="w-5 h-5 text-blue-500" />
+                    <Activity className="w-5 h-5 text-emerald-500" />
                     How it works
                   </h3>
                   <div className="space-y-4">
@@ -270,7 +270,7 @@ export default function App() {
                       { step: "4", title: "The Response", desc: "The app receives the signal, fetches the current GPS location, and sends an SMS with a Google Maps link to emergency contacts." }
                     ].map((item, i) => (
                       <div key={i} className="flex gap-4">
-                        <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 text-[10px] font-bold flex-shrink-0">
+                        <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500 text-[10px] font-bold flex-shrink-0">
                           {item.step}
                         </div>
                         <div className="space-y-1">
@@ -313,7 +313,7 @@ export default function App() {
                     {!isPaired ? (
                       <button 
                         onClick={handleAddDevice}
-                        className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 active:scale-95 transition-transform flex items-center justify-center gap-2"
+                        className="w-full py-4 bg-emerald-600 text-white font-bold rounded-2xl shadow-lg shadow-emerald-600/20 active:scale-95 transition-transform flex items-center justify-center gap-2"
                       >
                         <Bluetooth className="w-5 h-5" />
                         Pair New Device
@@ -351,7 +351,7 @@ export default function App() {
                           className={`w-32 h-32 rounded-full flex items-center justify-center shadow-2xl transition-all ${
                             simStatus === 'emergency' 
                               ? 'bg-red-600 shadow-red-600/50 animate-pulse' 
-                              : 'bg-blue-600 shadow-blue-600/30'
+                              : 'bg-emerald-600 shadow-emerald-600/30'
                           }`}
                         >
                           <span className="text-white font-black text-2xl">SOS</span>
@@ -503,10 +503,10 @@ export default function App() {
               key={item.id}
               onClick={() => setActiveTab(item.id as Tab)}
               className={`flex flex-col items-center gap-1.5 transition-all ${
-                activeTab === item.id ? 'text-blue-500' : 'text-gray-500 hover:text-gray-300'
+                activeTab === item.id ? 'text-emerald-500' : 'text-gray-500 hover:text-gray-300'
               }`}
             >
-              <div className={`p-2 rounded-xl transition-colors ${activeTab === item.id ? 'bg-blue-500/10' : ''}`}>
+              <div className={`p-2 rounded-xl transition-colors ${activeTab === item.id ? 'bg-emerald-500/10' : ''}`}>
                 <item.icon className="w-6 h-6" />
               </div>
               <span className="text-[10px] font-bold uppercase tracking-widest">{item.label}</span>
