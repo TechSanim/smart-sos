@@ -1,0 +1,23 @@
+name: smart_sos_locket
+description: A safety application for women's emergency.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_blue_plus: ^1.31.0 # BLE Support
+  geolocator: ^10.1.0       # GPS Location
+  url_launcher: ^6.2.5      # SMS & Maps Links
+  permission_handler: ^11.3.0 # Permission management
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
