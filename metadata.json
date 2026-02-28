@@ -1,5 +1,5 @@
 {
-  "name": "Smart SOS App",
+  "name": "SOSphere",
   "description": "A mobile-first emergency response application for personal safety, featuring device pairing, real-time tracking, and emergency alerts.",
   "requestFramePermissions": ["geolocation"]
 }
