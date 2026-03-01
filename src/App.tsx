@@ -125,17 +125,17 @@ export default function App() {
   const estimatedTime = (batteryLevel * 1.5).toFixed(0);
 
   return (
-    <div className="min-h-screen bg-[#050505] text-gray-200 font-sans selection:bg-fuchsia-500/30 flex flex-col">
+    <div className="min-h-screen bg-[#050505] text-gray-200 font-sans selection:bg-blue-500/30 flex flex-col">
       {/* App Header */}
       <header className="bg-black/50 backdrop-blur-xl sticky top-0 z-50 pt-safe">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-fuchsia-500 rounded-lg flex items-center justify-center shadow-lg shadow-fuchsia-500/20">
+            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
               <Shield className="text-black w-5 h-5" />
             </div>
             <div className="flex flex-col">
               <h1 className="font-bold text-lg leading-none tracking-tight text-white">SOSphere</h1>
-              <span className="text-[8px] uppercase tracking-[0.2em] text-fuchsia-500/80 font-bold">Smart Safety System</span>
+              <span className="text-[8px] uppercase tracking-[0.2em] text-blue-500/80 font-bold">Smart Safety System</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -145,7 +145,7 @@ export default function App() {
             </span>
           </div>
         </div>
-        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-fuchsia-500/80 to-transparent shadow-[0_0_10px_rgba(217,70,239,0.3)] relative -top-[2px]" />
+        <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-blue-500/80 to-transparent shadow-[0_0_10px_rgba(59,130,246,0.3)] relative -top-[2px]" />
       </header>
 
       {/* Main Content Area */}
@@ -162,7 +162,7 @@ export default function App() {
               >
                 <section className="space-y-2">
                   <h2 className="text-3xl font-black text-white tracking-tight">
-                    Safety in your <span className="text-fuchsia-500 italic">pocket.</span>
+                    Safety in your <span className="text-blue-500 italic">pocket.</span>
                   </h2>
                   <p className="text-gray-400 text-sm leading-relaxed">
                     A complete end-to-end solution for emergency response, 
@@ -210,7 +210,7 @@ export default function App() {
                   {simStatus === 'emergency' && (
                     <button 
                       onClick={resetSim}
-                      className="w-full py-4 bg-fuchsia-600 text-white font-bold rounded-2xl shadow-lg shadow-fuchsia-600/20 active:scale-95 transition-transform"
+                      className="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 active:scale-95 transition-transform"
                     >
                       I am Safe
                     </button>
@@ -218,9 +218,9 @@ export default function App() {
                 </div>
 
                 {/* Info Card */}
-                <div className="p-6 rounded-3xl bg-fuchsia-500/5 border border-fuchsia-500/10 space-y-4">
+                <div className="p-6 rounded-3xl bg-blue-500/5 border border-blue-500/10 space-y-4">
                   <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                    <Info className="w-4 h-4 text-fuchsia-500" />
+                    <Info className="w-4 h-4 text-blue-500" />
                     Safety Tip
                   </h3>
                   <p className="text-xs text-gray-400 leading-relaxed">
@@ -248,7 +248,7 @@ export default function App() {
                     }
                   ].map((feature, i) => (
                     <div key={i} className="p-5 rounded-3xl bg-white/5 border border-white/5 flex gap-4 items-start">
-                      <div className="w-10 h-10 rounded-xl bg-fuchsia-500/10 flex items-center justify-center text-fuchsia-500 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 flex-shrink-0">
                         <feature.icon className="w-5 h-5" />
                       </div>
                       <div className="space-y-1">
@@ -316,7 +316,7 @@ export default function App() {
                     {!isPaired ? (
                       <button 
                         onClick={handleAddDevice}
-                        className="w-full py-4 bg-fuchsia-600 text-white font-bold rounded-2xl shadow-lg shadow-fuchsia-600/20 active:scale-95 transition-transform flex items-center justify-center gap-2"
+                        className="w-full py-4 bg-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 active:scale-95 transition-transform flex items-center justify-center gap-2"
                       >
                         <Bluetooth className="w-5 h-5" />
                         Pair New Device
@@ -354,7 +354,7 @@ export default function App() {
                           className={`w-32 h-32 rounded-full flex items-center justify-center shadow-2xl transition-all ${
                             simStatus === 'emergency' 
                               ? 'bg-red-600 shadow-red-600/50 animate-pulse' 
-                              : 'bg-fuchsia-600 shadow-fuchsia-600/30'
+                              : 'bg-blue-600 shadow-blue-600/30'
                           }`}
                         >
                           <span className="text-white font-black text-2xl">SOS</span>
@@ -393,12 +393,12 @@ export default function App() {
                         onChange={(e) => setNewContact(e.target.value)}
                         placeholder="Phone number"
                         disabled={emergencyContacts.length >= 3}
-                        className="flex-1 bg-black/40 border border-white/10 rounded-2xl px-4 py-4 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-fuchsia-500/50 transition-colors disabled:opacity-50"
+                        className="flex-1 bg-black/40 border border-white/10 rounded-2xl px-4 py-4 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 transition-colors disabled:opacity-50"
                       />
                       <button 
                         onClick={addContact}
                         disabled={!newContact.trim() || emergencyContacts.length >= 3}
-                        className="w-14 bg-fuchsia-600 text-white rounded-2xl flex items-center justify-center disabled:bg-gray-800 transition-colors"
+                        className="w-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center disabled:bg-gray-800 transition-colors"
                       >
                         <UserPlus className="w-5 h-5" />
                       </button>
@@ -506,10 +506,10 @@ export default function App() {
               key={item.id}
               onClick={() => setActiveTab(item.id as Tab)}
               className={`flex flex-col items-center gap-1.5 transition-all ${
-                activeTab === item.id ? 'text-fuchsia-500' : 'text-gray-500 hover:text-gray-300'
+                activeTab === item.id ? 'text-blue-500' : 'text-gray-500 hover:text-gray-300'
               }`}
             >
-              <div className={`p-2 rounded-xl transition-colors ${activeTab === item.id ? 'bg-fuchsia-500/10' : ''}`}>
+              <div className={`p-2 rounded-xl transition-colors ${activeTab === item.id ? 'bg-blue-500/10' : ''}`}>
                 <item.icon className="w-6 h-6" />
               </div>
               <span className="text-[10px] font-bold uppercase tracking-widest">{item.label}</span>

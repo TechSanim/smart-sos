@@ -1,0 +1,11 @@
+{
+	"appId": "com.sosphere.app",
+	"appName": "SOSphere",
+	"webDir": "dist",
+	"bundledWebRuntime": false,
+	"packageClassList": [
+		"DevicePlugin",
+		"HapticsPlugin",
+		"StatusBarPlugin"
+	]
+}

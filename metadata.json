@@ -1,5 +1,5 @@
 {
   "name": "SOSphere",
-  "description": "SOSphere: Smart Safety System. A mobile-first emergency response application for personal safety, featuring device pairing, real-time tracking, and emergency alerts.",
+  "description": "SOSphere: A Smart Safety System for personal emergency response, featuring BLE device pairing, real-time GPS tracking, and instant alerts.",
   "requestFramePermissions": ["geolocation"]
 }
